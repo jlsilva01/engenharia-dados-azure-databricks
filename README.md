@@ -35,10 +35,10 @@ The output includes credentials that you must protect. Be sure that you do not i
 }
 ```
 
-*OBS:*
-azure_client_id: "appId" (o ID do aplicativo).
-azure_client_secret: "password" (a senha do Service Principal).
-azure_tenant_id: "tenant" (o ID do tenant da sua organização).
+OBS:<br>
+azure_client_id: "appId" (o ID do aplicativo).<br>
+azure_client_secret: "password" (a senha do Service Principal).<br>
+azure_tenant_id: "tenant" (o ID do tenant da sua organização).<br>
 
 ```bash
 az role assignment create --assignee <client-id> --role Contributor --resource-group <resource-group-name> (opcional)
