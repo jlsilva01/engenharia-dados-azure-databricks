@@ -40,10 +40,6 @@ azure_client_id: "appId" (o ID do aplicativo).<br>
 azure_client_secret: "password" (a senha do Service Principal).<br>
 azure_tenant_id: "tenant" (o ID do tenant da sua organização).<br>
 
-```bash
-az role assignment create --assignee <client-id> --role Contributor --resource-group <resource-group-name> (opcional)
-```
-
 ## Licença
 
 Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE](LICENSE) para detalhes.
