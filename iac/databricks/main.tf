@@ -19,7 +19,7 @@ resource "azurerm_virtual_network" "iac-vnet" {
 
 resource "azurerm_subnet" "iac-subnet" {
   name                 = "iac-subnet"
-  resource_group_name = azurerm_resource_group.iac-rg.name
+  resource_group_name  = azurerm_resource_group.iac-rg.name
   virtual_network_name = azurerm_virtual_network.iac-vnet.name
   address_prefixes     = ["10.0.1.0/24"]
 }
