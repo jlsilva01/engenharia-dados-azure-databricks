@@ -1,13 +1,12 @@
 variable "resource_group_name" {
   description = "Nome do Resource Group do Databricks"
   type        = string
-  default     = "rg-iac-databricks"
 }
 
 variable "location" {
   description = "Localização do Databricks"
   type        = string
-  default     = "East US"
+  default     = "East US"  
 }
 
 variable "subscription_id" {

@@ -1,9 +1,9 @@
-resource "random_id" "storage_account_name_unique" {
+resource "random_id" "name_unique" {
   byte_length = 8
 }
 
 resource "azurerm_mssql_server" "sql" {
-  name                         = "sqlserver${random_id.storage_account_name_unique.hex}"
+  name                         = "sqlserver${random_id.name_unique.hex}"
   resource_group_name          = var.resource_group_name
   location                     = var.location
   version                      = "12.0"
@@ -32,6 +32,8 @@ resource "azurerm_mssql_database" "sql" {
   collation                   = "SQL_Latin1_General_CP1_CI_AS"
   sku_name                    = "Basic"
   max_size_gb                 = 2
+  zone_redundant              = false
+  storage_account_type        = "Local"
 }
 
 data "ipify_ip" "public" {}
