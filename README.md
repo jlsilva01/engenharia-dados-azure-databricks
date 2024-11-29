@@ -40,6 +40,36 @@ azure_client_id: "appId" (o ID do aplicativo).<br>
 azure_client_secret: "password" (a senha do Service Principal).<br>
 azure_tenant_id: "tenant" (o ID do tenant da sua organização).<br>
 
+#### Exemplo do arquivo `terraform.tfvars` da pasta `iac\adls\`
+
+
+```
+subscription_id     = "00000000-ffff-0000-0000-ffffffffffff"
+resource_group_name = "rg-iac-data-engineering"
+```
+
+#### Exemplo do arquivo `terraform.tfvars` da pasta `iac\databricks\`
+
+```
+azure_client_id     = "22222222-bbbb-2222-2222-bbbbbbbbbbbb"
+azure_client_secret = "AA.AA~FffFFfff_FFFFFfFFFFFffFf-fFfffffff"
+azure_tenant_id     = "11111111-aaaa-1111-1111-aaaaaaaaaaaa"
+workspace_name      = "ws-iac-data-engineering"
+subscription_id     = "00000000-ffff-0000-0000-ffffffffffff"
+resource_group_name = "rg-iac-data-engineering"
+```
+
+#### Exemplo do arquivo `terraform.tfvars` da pasta `iac\sqlserver\`
+
+```
+subscription_id     = "00000000-ffff-0000-0000-ffffffffffff"
+resource_group_name = "rg-iac-data-engineering"
+usuario_admin       = "nome_do_usuario"
+password            = "sua_senha_forte"
+```
+
+
+
 ## Licença
 
 Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE](LICENSE) para detalhes.
