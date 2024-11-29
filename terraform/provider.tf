@@ -1,5 +1,9 @@
 provider "azurerm" {
-  features {}
+  features {
+    resource_group {
+      prevent_deletion_if_contains_resources = false
+    }
+  }
 
   # Autenticação via Service Principal (melhor para automação)
   client_id       = var.azure_client_id
